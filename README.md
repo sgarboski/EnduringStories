@@ -1,9 +1,5 @@
-# Shamokin Stories
+# Mining Memory
 
-Aleksandar Antonov, Stephanie Garboski
+Stephanie Garboski
 
 Seeking to capture the passing stories of the Shamokin area.
-
-
-
-

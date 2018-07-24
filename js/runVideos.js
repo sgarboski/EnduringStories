@@ -11,6 +11,14 @@ var nowFiles = ["https://s3.amazonaws.com/mining-memory/Costello_Now_Industry.mp
 //This function should "load up" the videos for the desired memory
 function runMemPage(memType){
 
+  //Needs to remove all other carousel elements from this page on page refresh
+  //Added a class called "mem-carousel" to more specifically identify
+$(document).ready(function(){
+  $(".carousel-inner").empty();
+  $(".carousel-indicators").empty();
+
+});
+
   var videoArr;
   switch (memType){
     case 'then':
