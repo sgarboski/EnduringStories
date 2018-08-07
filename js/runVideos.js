@@ -12,7 +12,6 @@ var nowFiles = ["https://s3.amazonaws.com/mining-memory/Costello_Now_Industry.mp
 function runMemPage(memType){
 
   //Needs to remove all other carousel elements from this page on page refresh
-  //Added a class called "mem-carousel" to more specifically identify
 $(document).ready(function(){
   $(".carousel-inner").empty();
   $(".carousel-indicators").empty();
@@ -38,7 +37,7 @@ $(document).ready(function(){
 
   $(document).ready(function(){
     for(var i=0 ; i< videoArr.length ; i++) {
-      $('<div class="carousel-item embed-responsive-item"> <video onClick="pausePlay(this)" class="embed-responsive-item"> \
+      $('<div id="playingVid" class="carousel-item embed-responsive-item"> <video onClick="pausePlay(this)" class="embed-responsive-item"> \
        <source src="'+videoArr[i]+'" type="video/mp4"> \
        </video> <div class="carousel-caption"> </div>   </div>').appendTo('.carousel-inner');
       $('<li data-target=""#carouselExampleIndicators" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
@@ -46,7 +45,7 @@ $(document).ready(function(){
     }
     $('.carousel-item').first().addClass('active');
     $('.carousel-indicators > li').first().addClass('active');
-    $('#carouselxExampleIndicators').carousel();
+    $('#carouselExampleIndicators').carousel();
   });
 
 
@@ -62,3 +61,12 @@ function pausePlay(id){
   }
 
 }
+
+function checkLast(){
+  var ifLast = $('#carouselExampleIndicators div:last-child').hasClass('active');
+  if (ifLast ){
+    alert("Please Enter Next Memory: ");
+  }
+}
+
+//document.getElementById('playingVid').pause()

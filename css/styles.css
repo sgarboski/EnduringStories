@@ -23,6 +23,8 @@
     transition: all 1s ease;
 }
 
+
+
 .col-sm:hover{
     opacity:.30;
 }
@@ -92,6 +94,12 @@ width:100%;
 
 
 }
+
+video{
+max-width: 100%;
+height: auto;
+}
+
 
 
 
